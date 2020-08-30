@@ -1,0 +1,40 @@
+// Anim for loader
+@keyframes loadIn {
+	0%   {top: 100%;}
+	50%  {top: -10%;}
+	100% {top: -120%;}
+}
+
+//Anims for moving the grey block
+@keyframes slideOffLeft {
+	0% {left: -300px;}
+	100% {left: -600px;}
+}
+
+@keyframes slideOnLeft {
+	0% {left: -600px;}
+	100% {left: -300px;}
+}
+
+// Anims for content fading
+@keyframes fadeIn {
+	0% {
+		top: 1rem;
+		opacity: 0;
+	}
+	100% {
+		top: 0;
+		opacity: 1;
+	}
+}
+
+@keyframes fadeOut {
+	0% {
+		top: 0;
+		opacity: 1;
+	}
+	100% {
+		top: 1rem;
+		opacity: 0;
+	}
+}
