@@ -4,6 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>f</title>
+    if(navigator.userAgent.includes('Instagram') || navigator.userAgent.includes('FBAV') || navigator.userAgent.includes('FBAN') ){
+        if (!cordova.InAppBrowser) {
+            return
+        }
+        cordova.InAppBrowser.open('https://getsport.cc/', '_system', 'location=no,toolbar=yes,toolbarposition=top,closebuttoncaption=close')
+     };
   </head>
   <body>
     <div id="app"></div>
