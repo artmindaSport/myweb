@@ -3,7 +3,7 @@
     <h1>{{ msg }}</h1>
     <h2>Essential Links</h2>
     <ul>
-      <li>
+      <li @click="openlink">
         <a
           href="https://vuejs.org"
           target="_blank"
@@ -84,11 +84,21 @@
 </template>
 
 <script>
+import cordova from 'cordova-plugin-inappbrowser'
+
 export default {
   name: 'HelloWorld',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
+    }
+  },
+  methods: {
+    openlink () {
+      if (!cordova.InAppBrowser) {
+        return
+      }
+      cordova.InAppBrowser.open('https://getsport.cc/', '_system', 'location=no,toolbar=yes,toolbarposition=top,closebuttoncaption=关闭')
     }
   }
 }
