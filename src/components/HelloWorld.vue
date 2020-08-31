@@ -84,7 +84,6 @@
 </template>
 
 <script>
-import cordova from 'cordova-plugin-inappbrowser'
 
 export default {
   name: 'HelloWorld',
@@ -95,10 +94,10 @@ export default {
   },
   methods: {
     openlink () {
-      if (!cordova.InAppBrowser) {
-        return
-      }
-      cordova.InAppBrowser.open('https://getsport.cc/', '_system', 'location=no,toolbar=yes,toolbarposition=top,closebuttoncaption=关闭')
+    //   if (!cordova.InAppBrowser) {
+    //     return
+    //   }
+    //   cordova.InAppBrowser.open('https://getsport.cc/', '_system', 'location=no,toolbar=yes,toolbarposition=top,closebuttoncaption=关闭')
     }
   }
 }
